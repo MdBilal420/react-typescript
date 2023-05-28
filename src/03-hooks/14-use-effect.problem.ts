@@ -2,10 +2,12 @@ import { useEffect } from "react";
 
 export const useTimeout = (timerMs: number) => {
   useEffect(
-    () =>
-      setTimeout(() => {
+    () => {
+      const timer = setTimeout(() => {
         console.log("Done!");
-      }, timerMs),
+      }, timerMs)
+      clearTimeout(timer)
+    },
     [timerMs],
   );
 };

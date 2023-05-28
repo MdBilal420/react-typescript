@@ -2,10 +2,11 @@ import React from "react";
 
 interface Props {
   className: string;
+
 }
 
 /* @ts-expect-error */
-export const Button = (props: Props) => {
+export const Button:React.FunctionComponent<props> = (props: Props) => {
   return {
     ohDear: "123",
   };
